@@ -89,6 +89,7 @@ button:active {
   font-weight: 700;
   letter-spacing: 1px;
   text-transform: uppercase;
+  margin-left: 20px;
  
 }
 
@@ -144,7 +145,7 @@ button:active {
 
 .nav__links {
   display: flex;
-  align-content: center;
+  align-items: center;
 }
 
 .btn__menu {
@@ -487,7 +488,7 @@ select {
 
   .nav__links {
     display: flex;
-    align-content: center;
+    align-items: center;
   }
 
   .highlight {
