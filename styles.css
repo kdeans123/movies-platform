@@ -257,6 +257,7 @@ input {
   gap: 20px;
   width: 100%;
   max-width: 600px;
+  position: relative;
 }
 
 .search__icon {
