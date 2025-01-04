@@ -312,7 +312,11 @@ input {
   cursor: pointer;
   object-fit: contain;
   object-position: left;
+}
 
+.movies__container {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 
