@@ -23,7 +23,7 @@ async function main(movieName) {
 
 }
 
-main()
+
 
 
 
