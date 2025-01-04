@@ -89,6 +89,7 @@ button:active {
   font-weight: 700;
   letter-spacing: 1px;
   text-transform: uppercase;
+ 
 }
 
 .contact__btn:hover {
@@ -319,7 +320,9 @@ input {
   z-index: 5;
 }
 
-
+.na {
+  align-content: center;
+}
 
 
 /*  MOVIES SEARCH    */
@@ -479,6 +482,7 @@ select {
 
   .nav__links {
     display: none;
+    align-content: center;
   }
 
   .highlight {
