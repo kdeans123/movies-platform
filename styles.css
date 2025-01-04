@@ -142,6 +142,11 @@ button:active {
   text-decoration: none;
 }
 
+.nav__links {
+  display: flex;
+  align-content: center;
+}
+
 .btn__menu {
   background-color: transparent;
   font-size: 40px;
