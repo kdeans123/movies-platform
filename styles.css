@@ -48,7 +48,7 @@ li {
 
 h1 {
   font-size: 56px;
-  color: #a00548;
+  color: white;
   margin-bottom: 24px;
   text-align: center;
 }
@@ -57,6 +57,7 @@ h2 {
   font-size: 32px;
   margin-bottom: 32px;
   text-align: center;
+  color: white;
 }
 
 button {
@@ -98,7 +99,7 @@ button:active {
   margin-left: 16px;
   text-decoration: none;
   font-size: 20px;
-  color: #7342d6;
+  color: white ;
   font-weight: bold;
   padding: 8px;
 }
@@ -268,7 +269,8 @@ input {
   right: 16px;
   transform: translateY(-50%);
   color: black;
- 
+  z-index: 3;
+  cursor: pointer;
 }
 
 .overlay {
@@ -281,17 +283,41 @@ input {
   bottom: 0;
   right: 0;
   z-index: -1;
-  opacity: 30%;
+  opacity: 75%;
+
+}
+
+.overlay::after {
+  width: 100%;
+  height: 100%;
+  color: #a00548;
+  opacity: 50%;
+  z-index: 5;
+}
+
+
+
+
+/*  MOVIES SEARCH    */
+
+.movie {
+  width: 25%;
+  padding: 24px;
+}
+
+.movie__img {
+  max-height: 380px;
+  width: 100%;
+  transition: all 300ms ease;
+  cursor: pointer;
+  object-fit: contain;
+  object-position: left;
 
 }
 
 
 
-/* 
-
-FOOTER
-
-*/
+/*  FOOTER    */
 
 footer {
   background-color: #242424;
