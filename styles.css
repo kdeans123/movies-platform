@@ -481,7 +481,7 @@ select {
   }
 
   .nav__links {
-    display: none;
+    display: flex;
     align-content: center;
   }
 
