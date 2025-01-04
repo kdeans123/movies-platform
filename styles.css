@@ -259,81 +259,28 @@ input {
   max-width: 600px;
 }
 
-/* 
-
-
-
-/* 
-
-FEATURES 
-
-*/
-
-#features {
-  padding-top: 8vw;
-  background-color: rgba(115, 66, 214, 0.1);
+.search__icon {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  transform: translateY(-50%);
 }
 
-.books {
-  display: flex;
-  flex-wrap: wrap;
+.overlay {
+  background-image: https://static1.srcdn.com/wordpress/wp-content/uploads/2023/11/greatest-movies-of-all-time.jpg?q=70&fit=crop&w=1140&h=&dpr=1;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
 }
 
-.book {
-  width: 25%;
-  padding: 24px;
-}
 
-.book__img {
-  max-height: 380px;
-  transition: all 300ms ease;
-  cursor: not-allowed;
-  /* Added after tutorial to maintain image aspect ratio */
-  object-fit: contain;
-  object-position: left;
-}
-
-.book__img--wrapper {
-  margin-bottom: 8px;
-  border-radius: 4px;
-  overflow: hidden;
-  display: flex;
-}
-
-.book:hover .book__img {
-  transform: scale(1.03);
-}
-
-.book__title {
-  font-size: 20px;
-  margin-bottom: 8px;
-}
-
-.book__title:hover {
-  text-decoration: underline;
-  cursor: not-allowed;
-}
-
-.book__ratings {
-  margin-bottom: 8px;
-  color: #fabf2a;
-}
-
-.book__price--normal {
-  text-decoration: line-through;
-  padding-right: 6px;
-  color: #bfbfbf;
-}
-
-/* 
-
-EXPLORE
-
-*/
-
-#explore {
-  background-color: rgba(115, 66, 214, 0.1);
-}
 
 /* 
 
