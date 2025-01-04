@@ -4,7 +4,7 @@ async function main(movieName) {
   const data = await fetch(`https://www.omdbapi.com/?apikey=aecc1b78&s=${movieName}`)
   const movieData = await data.json();
   const result = movieData.Search
-  const moviesWrapper = document.querySelector('.movies')
+  const moviesWrapper = document.querySelector('.movies__container')
   const moviesHtml = result
         .map(movie => {
             return `<div class="movie">
