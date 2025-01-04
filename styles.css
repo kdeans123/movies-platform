@@ -77,6 +77,16 @@ button:active {
   border: none;
 }
 
+.contact__btn {
+  background-color: #f5656f;
+  padding: 8px 20px;
+  border-radius: 50px;
+  color: white;
+  transition: all 300ms ease;
+  height: 40px;
+  border: none;
+}
+
 .purple {
   color: #a00548;
 }
