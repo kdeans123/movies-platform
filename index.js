@@ -5,8 +5,7 @@ async function renderMovies(movieName) {
   const movieData = await data.json();
   const result = movieData.Search
   const moviesWrapper = document.querySelector('.movies__container')
-  const moviesHtml = result
-        .map(movie => {
+  const moviesHtml = result.map(movie => {
             return `<div class="movie">
                       <figure class="movie__img--wrapper">
                             <img class="movie__img" src="${movie.Poster}" alt="">
@@ -30,24 +29,22 @@ setTimeout(() => {
   renderMovies();
 });
 
-async function renderMovies(filter) {
+async function filterMovies(event) {
   const moviesWrapper = document.querySelector('.movies__container')
-}
-
-
-
-function filterMovies(event) {
 
   if (filter === 'A_TO_Z') {
     movies.sort((a, b) => a.Title.localeCompare(b.Title));
   }
   else if (filter === 'Z_TO_A') {
-    movies.sort((a, b) => b.Title.localeCompare(a.Title));;
+    movies.sort((a, b) => b.Title.localeCompare(a.Title));
   }
   else if (filter === 'RATING') {
     movies.sort((a, b) => b.rating - a.rating);
   }
 }
+
+
+
 
 
 
