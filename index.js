@@ -19,16 +19,38 @@ async function main(movieName) {
   console.log(movieData)      
   console.log(result)
 
+
+
+
+
+
   moviesWrapper.innerHTML = moviesHtml;
 
 }
 
+async function renderMovies(filter) {
+  const moviesWrapper = document.querySelector('.movies__container')
+}
 
 
 
+function filterMovies(event) {
+  renderMovies(event.target.value);
 
-function searchMovies(event) {
-  main(event.target.value)
+  if (filter === 'A_TO_Z') {
+    movies.sort((a, b) => a.Title.localeCompare(b.Title));
+  }
+  else if (filter === 'Z_TO_A') {
+    movies.sort((a, b) => b.Title.localeCompare(a.Title));;
+  }
+  else if (filter === 'RATING') {
+    movies.sort((a, b) => b.rating - a.rating);
+  }
+}
+
+
+function filterMovies(event) {
+  renderMovies(event.target.value)
   console.log(event.target.value)
 }
 
