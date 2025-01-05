@@ -16,10 +16,6 @@ async function main(movieName) {
                     </div>`;
         })
         .join("");
-  console.log(movieData)      
-  console.log(result)
-
-
 
 
 
