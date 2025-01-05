@@ -49,10 +49,7 @@ function filterMovies(event) {
 }
 
 
-function filterMovies(event) {
-  renderMovies(event.target.value)
-  console.log(event.target.value)
-}
+
 
 // we want to give it to the search button, so we will use event listener, and it will be onclick inside of the html, for now I can the function directly in js using main() 
 // after we remoe the main function and give it to the button search 
