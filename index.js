@@ -1,11 +1,15 @@
 // https://www.omdbapi.com/?apikey=aecc1b78&s=fast
 
-async function renderMovies(movieName) {
+let movies;
+
+async function renderMovies() {
+  const inputElement = document.querySelector(".search__input");
+  const movieName = inputElement.value;  
   const data = await fetch(`https://www.omdbapi.com/?apikey=aecc1b78&s=${movieName}`)
   const movieData = await data.json();
-  const result = movieData.Search
+  const movies = movieData.Search
   const moviesWrapper = document.querySelector('.movies__container')
-  const moviesHtml = result.map(movie => {
+  const moviesHtml = movies.map(movie => {
             return `<div class="movie">
                       <figure class="movie__img--wrapper">
                             <img class="movie__img" src="${movie.Poster}" alt="">
@@ -16,20 +20,16 @@ async function renderMovies(movieName) {
         })
         .join("");
 
-
-
-
   moviesWrapper.innerHTML = moviesHtml;
-
-
-
 }
+
 
 setTimeout(() => {
   renderMovies();
 });
 
 async function filterMovies(event) {
+  const filter = event.target.value;
   const moviesWrapper = document.querySelector('.movies__container')
 
   if (filter === 'A_TO_Z') {
@@ -38,9 +38,26 @@ async function filterMovies(event) {
   else if (filter === 'Z_TO_A') {
     movies.sort((a, b) => b.Title.localeCompare(a.Title));
   }
-  else if (filter === 'RATING') {
-    movies.sort((a, b) => b.rating - a.rating);
+  else if (filter === 'YEAR_DESC') {
+    movies.sort((a, b) => b.Year - a.Year);
   }
+  else if (filter === 'YEAR_ASC') {
+    movies.sort((a, b) => a.Year - b.Year);
+  }  
+
+  const moviesHtml = movies.map(movie => {
+    return `<div class="movie">
+              <figure class="movie__img--wrapper">
+                    <img class="movie__img" src="${movie.Poster}" alt="">
+              </figure>
+              <div class="movie__title">${movie.Title}</div>
+              <div class="movie__year">${movie.Year}</div>                      
+            </div>`;
+})
+.join("");
+
+moviesWrapper.innerHTML = moviesHtml;
+
 }
 
 

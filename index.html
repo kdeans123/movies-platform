@@ -53,8 +53,8 @@
             <input
               type="text"
               placeholder="Search by Category, Reviews, Keywords"
-              onchange="renderMovies(event)"/>
-                <i class="fa-solid fa-magnifying-glass search__icon" onclick="renderMovies(event)"></i>
+              onchange="renderMovies()" class="search__input"/>
+                <i class="fa-solid fa-magnifying-glass search__icon" onclick="renderMovies()"></i>
           </div>
         </div>
       </div>
@@ -68,7 +68,8 @@
             <option value="" disabled selected>Sort</option>
             <option value="A_TO_Z">A to Z</option>
             <option value="Z_TO_A">Z to A</option>
-            <option value="RATING">Rating</option>
+            <option value="YEAR_DESC">Year Descending</option>
+            <option value="YEAR_ASC">Year Ascending</option>
           </select>
         </div>
       <div class="movies__container">
