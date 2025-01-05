@@ -1,6 +1,6 @@
 // https://www.omdbapi.com/?apikey=aecc1b78&s=fast
 
-async function main(movieName) {
+async function renderMovies(movieName) {
   const data = await fetch(`https://www.omdbapi.com/?apikey=aecc1b78&s=${movieName}`)
   const movieData = await data.json();
   const result = movieData.Search
@@ -22,7 +22,13 @@ async function main(movieName) {
 
   moviesWrapper.innerHTML = moviesHtml;
 
+
+
 }
+
+setTimeout(() => {
+  renderMovies();
+});
 
 async function renderMovies(filter) {
   const moviesWrapper = document.querySelector('.movies__container')
