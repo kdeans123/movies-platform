@@ -35,7 +35,6 @@ async function renderMovies(filter) {
 
 
 function filterMovies(event) {
-  renderMovies(event.target.value);
 
   if (filter === 'A_TO_Z') {
     movies.sort((a, b) => a.Title.localeCompare(b.Title));
@@ -47,6 +46,9 @@ function filterMovies(event) {
     movies.sort((a, b) => b.rating - a.rating);
   }
 }
+
+
+
 
 
 
